@@ -1,0 +1,22 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+use vars qw ($vehicle); # or "our $foo" if you're using 5.6
+
+$vehicle = "bicycle";
+
+print "My vehicle is : $vehicle\n";
+
+print "I changed my vehicle to car. \n";
+ &change_vehicle();
+print "Now my vehicle is : '", &change_vehicle(), "'\n";
+
+sub change_vehicle {
+ local $vehicle = "car";
+ show_vehicle();
+}
+
+sub show_vehicle {
+ return $vehicle;
+}
