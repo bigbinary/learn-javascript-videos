@@ -1,3 +1,4 @@
+"use strict";
 
 // function declaration
 function car() {
@@ -16,3 +17,6 @@ var minivan = function() {
 car();
 
 minivan();
+
+
+i = 10;

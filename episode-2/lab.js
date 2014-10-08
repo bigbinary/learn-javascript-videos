@@ -1,7 +1,6 @@
-// JavaScript does not support block scoping
+// each function gets its own scope
 
 function lab() {
-
   var vehicle = 'car';
   log(vehicle);
 
@@ -12,6 +11,17 @@ function lab() {
 
   log(vehicle);
 
+  function fly() {
+    log(vehicle);
+  }
+
+  log(vehicle);
+
+  fly();
+
+  log(vehicle);
+
 }
 
 lab();
+
